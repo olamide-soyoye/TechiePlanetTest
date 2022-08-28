@@ -1,2 +1,2 @@
 # TechiePlanetTest
-Solution to TechiePlanetTest
+Solution to TechiePlanetTest.
