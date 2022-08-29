@@ -1,3 +1,4 @@
+<!-- Program that creates a staircase -->
 <?php
 function create($n) {
     if($n >0 && $n<=100){

@@ -1,3 +1,4 @@
+<!-- A recursive function to find the sum of digits of a number. -->
 <?php
     function sum_of_digit($n)
     {

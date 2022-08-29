@@ -1,3 +1,4 @@
+<!-- Program to remove duplicates from each row of the n-dimensional array -->
 <?php
 $sample = [[1, 3, 1, 2, 3,4, 4, 3, 5],[1, 1, 1, 1, 1, 1, 1]];
 

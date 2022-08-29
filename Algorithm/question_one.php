@@ -1,3 +1,4 @@
+<!-- Program that prints time in words. -->
 <?php
 function convert($hour, $minutes)
 {
