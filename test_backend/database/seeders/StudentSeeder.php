@@ -36,9 +36,8 @@ class StudentSeeder extends Seeder
                 'mname' => 'Lucy', 
                 'email' => 'lucy@gmail.com', 
             ),
+            
         );
-
-
         foreach ($user as $value) {
             $user = Student::updateOrCreate($value);
         }

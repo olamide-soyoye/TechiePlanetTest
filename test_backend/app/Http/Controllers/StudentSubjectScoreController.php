@@ -22,6 +22,7 @@ class StudentSubjectScoreController extends Controller
             'student_id' => 'required',
             'result' => 'required|array'
         ]);
+
         $student = Student::find($request->student_id);
         $insertArr=[];
         foreach ($request->result as $key => $value) {
@@ -33,10 +34,8 @@ class StudentSubjectScoreController extends Controller
         } catch (\Throwable $th) {
             return response()->json(['status' => false, 'Message' => $th],405);
         }
-
-
-
     }
+
     public function retrieve_score()
     {
         $student = Student::select('*')->get();
@@ -47,7 +46,7 @@ class StudentSubjectScoreController extends Controller
                     's.subject_name','student_subject_scores.score',
                     )
             ->get();
-            // return $result_per_student;
+            
             if (!count($result_per_student)) {
                 for ($i=0; $i < 5; $i++) { 
                     $result_per_student[]=['score'=> '-'];
@@ -55,7 +54,6 @@ class StudentSubjectScoreController extends Controller
             }
             $mean = StudentSubjectScore::where('student_subject_scores.student_id',$value['id'])
             ->selectRaw("AVG(score) as mean")->value('mean');
-
             $median = DB::select("
                 SELECT AVG(dd.score) as median
                 FROM (
@@ -84,9 +82,8 @@ class StudentSubjectScoreController extends Controller
     }
     public function purge_scores(Request $request)
     {
-        $id = $request->id;
-        $delete=StudentSubjectScore::where('student_id',$id)->delete();
+        $student_d = $request->id;
+        $delete=StudentSubjectScore::where('student_id',$student_d)->delete();
         return response()->json(['status' => true, 'message' => 'scores deleted'],200);
-
     }
 }
