@@ -20,6 +20,8 @@ This is required because the backend is not hosted and API is set
 
 # Instructions for frontend
 Run "npm install" to install node modules.
-Run "npm run serve" to serve application on browser
+Run "npm run serve" to serve application on browser.
+
+To add scores for each student, click on the action button.
 
 

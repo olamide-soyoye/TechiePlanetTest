@@ -4,9 +4,9 @@
       
     <b-row>
         <b-col xs="12">
-            <div class="table-responsive">
-              <table class="table table-striped  mb-0 requests-table table-responsive">
-                <thead>
+            <div class="table-responsive card">
+              <table class="table table-striped  mb-0 requests-table ">
+                <thead class="font-weight-bold">
                   <tr class="text-muted">
                     <th>NAME</th>
                     <th v-for="subject in subjects"
