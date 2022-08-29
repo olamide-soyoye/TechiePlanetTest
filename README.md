@@ -19,7 +19,7 @@ For easy communication between frontend and backend please create Virtual Host a
 This is required because the backend is not hosted and API is set
 
 # Instructions for frontend
-Run "npm install" to install node modules
+Run "npm install" to install node modules.
 Run "npm run serve" to serve application on browser
 
 
